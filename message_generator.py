@@ -1,4 +1,12 @@
+import os
 import random
+import requests
+from lxml import html
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(find_dotenv())
+username = os.getenv('USERNAME')
+password = os.getenv('PASSWORD')
 
 bachelor_quotes = [
     '"If it\'s a pomegranate then God bless it." — Ashley S.',
@@ -19,23 +27,18 @@ bachelor_quotes = [
 ]
 
 class MessageGenerator:
-    def get_league_standings(self):
-    	return "league standings"
 
-    def get_requested_team(self, user):
-    	return "team standings"
+    def get_league_standings(self):
+        return "http://www.fantasy4reality.com/leagues/4247"
 
     def get_random_quote(self):
-    	return random.choice(bachelor_quotes)
-
-    def get_matt_pic(self):
-    	return "pic"
+        return random.choice(bachelor_quotes)
 
     def get_source(self):
-    	return "https://github.com/cameron612/"
+        return "https://github.com/cameron612/Fantasy-Bachelor-Bot"
 
     def get_congrats_message(self):
-    	return 'Congrats! 🎈🎉'
+        return 'Congrats! 🎈🎉'
 
     def get_barb_message(self):
-    	return 'You called?'
+        return 'You called?'

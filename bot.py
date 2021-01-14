@@ -48,11 +48,6 @@ async def scoreboard(context):
     response = message_generator.get_league_standings()
     await context.send(response)
 
-@bot.command(name='team', help='Get scores for just your team')
-async def team(context):
-    response = message_generator.get_requested_team(message.author)
-    await context.send(response)
-
 @bot.command(name='quote', help='History lesson')
 async def team(context):
     response = message_generator.get_random_quote()
@@ -60,8 +55,7 @@ async def team(context):
 
 @bot.command(name='matt', help='Hot pic')
 async def team(context):
-    response = message_generator.get_matt_pic()
-    await context.send(response)
+    await context.send(file=discord.File('matt.jpg'))
 
 @bot.command(name='source', help='github link')
 async def team(context):

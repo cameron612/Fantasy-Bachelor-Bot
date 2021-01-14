@@ -1,6 +1,6 @@
 import os
 import random
-from lxml import html
+#from lxml import html
 #from dotenv import load_dotenv, find_dotenv
 
 #load_dotenv(find_dotenv())

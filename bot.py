@@ -1,11 +1,11 @@
 import os
 import discord
-from dotenv import load_dotenv, find_dotenv
+#from dotenv import load_dotenv, find_dotenv
 from discord.ext import commands
 
 from message_generator import MessageGenerator
 
-load_dotenv(find_dotenv())
+#load_dotenv(find_dotenv())
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
